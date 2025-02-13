@@ -3,12 +3,9 @@
 </p>
 
 <h1>On-premises Active Directory Deployed in the Cloud (Azure)</h1>
-This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
+This project outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
 
 
-<h2>Video Demonstration</h2>
-
-- ### [YouTube: How to Deploy on-premises Active Directory within Azure Compute](https://www.youtube.com)
 
 <h2>Environments and Technologies Used</h2>
 
@@ -24,33 +21,95 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+- Step 1 - Create vitual network and virtual machine on Azure
+- Step 2 - Install active directory & Create admin user 
+- Step 3 - Setup remote desktop for non-admin users
+- Step 4 - Create users with powershell script 
+- Step 5 - Configure Group Policy to Lockout the account after 5 attempts
+- Step 6 - Enable , Disable accounts & monitor logs on domain controller 
 
 <h2>Deployment and Configuration Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  
+![dc-1vnetdns](https://github.com/user-attachments/assets/0328dd1a-67cb-43b2-a3a2-7db2cb37102d)
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+DC-1 Vnet configured.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  
+![downloadingactivedirectory](https://github.com/user-attachments/assets/9ed3c4c3-4830-4762-a508-3a39c0062f23)
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Active Directory install.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  
+![orginisationalunitEMPLOYEES](https://github.com/user-attachments/assets/6d8cc4ce-6d5e-49a7-a4de-dd38e1ef1705)
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Org Unit created.
 </p>
 <br />
+
+<p>
+  
+![memberofadminsjanedoe](https://github.com/user-attachments/assets/dbdfa928-ac3f-4321-8292-d4b7ddcedd40)
+
+</p>
+<p>
+Admin account created. 
+</p>
+<br />
+
+</p>
+
+![remoteaccesspermissions](https://github.com/user-attachments/assets/59ecee88-5e8e-4762-9bce-1aa2d4c647b0)
+
+</p>
+<p>
+Remote access permissions. 
+</p>
+<br />
+
+</p>
+
+![USERACCOUNTSCREATEDAD](https://github.com/user-attachments/assets/346810d5-1945-4d8e-8c64-4a8dbc9e83aa)
+
+</p>
+<p>
+User accounts created.
+</p>
+<br />
+
+</p>
+
+![ADaccountlockoutsettings](https://github.com/user-attachments/assets/a079bebf-0ec3-4f99-a99c-22b0d9842ea2)
+
+</p>
+<p>
+User account lockout settings.
+</p>
+<br />
+
+</p>
+
+![eventvwr](https://github.com/user-attachments/assets/c4b99746-fa56-4835-be3c-a7aebc26576e)
+
+</p>
+<p>
+Account log activity.
+</p>
+<br />
+
+</p>
+
+
